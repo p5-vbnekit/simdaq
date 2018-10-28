@@ -1,11 +1,11 @@
 # simdaq
 pure c++ and posix daemon
 
-# build
+## build
 g++ -o pcxxpd *.cpp -std=c++14 -lpthread -lstdc++fs
 
-# docker
-## build
+## docker
+### build
 docker build -t pcxxpd .
-## examine
+### examine
 docker run -v /dev/log:/dev/log --rm -it pcxxpd
