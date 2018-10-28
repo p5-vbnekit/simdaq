@@ -56,7 +56,7 @@ namespace config {
 
     inline static ::std::string path() noexcept(false) {
         auto const &&name = utils::copy(Context::instance().name);
-        return stdfs::absolute((name.empty() ? ::std::string{utils::defaultName()} : ::std::move(name)) + ".conf");
+        return stdfs::absolute((name.empty() ? ::std::string{utils::defaultName()} : ::std::move(name)) + ".conf", "/etc");
     }
 
     inline static auto const read() noexcept(false) {

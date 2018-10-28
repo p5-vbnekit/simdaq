@@ -28,7 +28,7 @@ namespace pid {
 
     inline static ::std::string path() noexcept(false) {
         auto const &&name = utils::copy(Context::instance().name);
-        return stdfs::absolute((name.empty() ? ::std::string{utils::defaultName()} : ::std::move(name)) + ".pid");
+        return stdfs::absolute((name.empty() ? ::std::string{utils::defaultName()} : ::std::move(name)) + ".pid", "/var/run");
     }
 
     template <class T> inline static auto read(T &&path) noexcept(false) {
